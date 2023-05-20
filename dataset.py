@@ -146,8 +146,8 @@ class IMDBBertDataset(Dataset):
             nsp_indices = self.vocab(nsp_sentence)
             inverse_token_mask = first_mask + [True] + second_mask
 
-            first, _ = self._preprocess_sentence(first.copy(), should_mask=False)
-            second, _ = self._preprocess_sentence(second.copy(), should_mask=False)
+            first, _ = self._preprocess_sentence(first.copy(), should_mask=True)
+            second, _ = self._preprocess_sentence(second.copy(), should_mask=True)
             original_nsp_sentence = first + [self.SEP] + second
             original_nsp_indices = self.vocab.lookup_indices(original_nsp_sentence)
 
