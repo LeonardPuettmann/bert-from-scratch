@@ -5,8 +5,8 @@ import torch.nn.functional as f
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class JointEmbedding(nn.Module):
-    
-      def __init(self, vocab_size, size):
+
+      def __init__(self, vocab_size, size):
             super(JointEmbedding, self).__init__()
 
             self.size = size
